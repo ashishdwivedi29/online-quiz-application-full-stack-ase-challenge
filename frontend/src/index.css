@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-900 text-white font-sans;
+    background-size: 200% 200%;
+    animation: gradient 10s ease infinite;
+    background-image: linear-gradient(135deg, #4c1d95, #6d28d9, #1e3a8a, #4f46e5);
+  }
+}
+
+.quiz-container {
+  @apply bg-gray-800 bg-opacity-80 backdrop-filter backdrop-blur-sm rounded-3xl shadow-2xl p-8 max-w-lg w-full mx-auto my-10 border-2 border-purple-500 transform transition-transform duration-500 ease-in-out;
+}
+
+.option-button {
+  @apply w-full text-left py-3 px-6 rounded-xl border border-gray-600 bg-gray-700 text-lg transition-all duration-300 transform hover:scale-105 hover:bg-purple-600;
+}
+
+.option-button.selected {
+  @apply bg-purple-700 border-purple-400 scale-105;
+}
+
+.option-button.correct {
+  @apply bg-green-600 border-green-400 hover:bg-green-600;
+}
+
+.option-button.incorrect {
+  @apply bg-red-600 border-red-400 hover:bg-red-600;
+}
